@@ -1,0 +1,3 @@
+---
+# defaults file for loumaris.ssh-key
+state: present

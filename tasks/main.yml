@@ -1,0 +1,9 @@
+---
+- name: "set ssh key {{keyfile}} to user {{username}}"
+  become: true
+  authorized_key:
+    user: "{{ username }}"
+    state: "{{ state }}"
+    key: "{{ item }}"
+  with_file:
+    - "ssh/public_keys/{{ keyfile }}.pub"
